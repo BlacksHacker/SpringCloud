@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: licensingservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      name: licensingservice
+      profile: ${spring.profiles.active}
+      uri: http://localhost:8888
+server:
+  port: 8081
